@@ -1,0 +1,19 @@
+{
+  "compilerOptions": {
+    "target": "es6",
+    "lib": ["es6", "dom"],
+    "module": "es6",
+    "outDir": "./built",
+    "jsx": "react",
+    "isolatedModules": true,
+    "strict": true,
+    "moduleResolution": "node",
+    "baseUrl": "./app",
+    "forceConsistentCasingInFileNames": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "typeRoots": ["types", "node_modules/@types"]
+  },
+  "include": ["app/**/*"],
+  "exclude": ["node_modules"]
+}
