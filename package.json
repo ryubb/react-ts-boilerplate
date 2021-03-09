@@ -13,7 +13,11 @@
     "lint:eslint": "eslint",
     "lint:eslint:fix": "eslint --fix",
     "lint": "npm run lint:eslint -- . ",
-    "prettify": "prettier --write"
+    "prettify": "prettier --write",
+    "clean-files": "rm -rf template",
+    "cp-files": "mkdir -p template && cp -a ./app ./webpack ./template&& cp -a ./.gitignore ./template/gitignore",
+    "prepublishOnly": "yarn cp-files",
+    "postpublish": "yarn clean-files"
   },
   "dependencies": {
     "@material-ui/core": "^4.11.0",
