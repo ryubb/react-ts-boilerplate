@@ -1,6 +1,6 @@
 {
   "name": "@ryubb/cra-template-react-ts-boilerplate",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "files": [
     "template",
     "template.json"
@@ -17,7 +17,7 @@
     "lint": "npm run lint:eslint -- . ",
     "prettify": "prettier --write",
     "clean-files": "rm -rf template",
-    "cp-files": "mkdir -p template && cp -a ./app ./webpack ./.eslintignore ./.eslintrc.js ./jest.config.js ./README.md ./tsconfig.json ./template && cp -a ./.gitignore ./template/gitignore",
+    "cp-files": "mkdir -p template && cp -a ./src ./webpack ./.eslintignore ./.eslintrc.js ./jest.config.js ./README.md ./tsconfig.json ./template && cp -a ./.gitignore ./template/gitignore",
     "prepublishOnly": "yarn cp-files",
     "postpublish": "yarn clean-files"
   },

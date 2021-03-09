@@ -8,12 +8,12 @@
     "isolatedModules": true,
     "strict": true,
     "moduleResolution": "node",
-    "baseUrl": "./app",
+    "baseUrl": "src/app",
     "forceConsistentCasingInFileNames": true,
     "esModuleInterop": true,
     "skipLibCheck": true,
-    "typeRoots": ["types", "node_modules/@types"]
+    "typeRoots": ["src/@types", "node_modules/@types"]
   },
-  "include": ["app/**/*"],
-  "exclude": ["node_modules"]
+  "include": ["src/app/**/*"],
+  "exclude": ["./node_modules", "./webpack"]
 }

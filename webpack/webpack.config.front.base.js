@@ -1,19 +1,18 @@
-/* eslint-disable no-undef */
-// いつか使う可能性が高いため、コメントアウトで対処している
+/* eslint-disable @typescript-eslint/no-var-requires */
 const path = require("path");
 const webpack = require("webpack");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 module.exports = {
   mode: "development",
-  entry: "./app/index.tsx",
+  entry: "./src/app/index.tsx",
   output: {
     path: path.resolve(__dirname, "../build"),
     filename: "bundle.js",
     publicPath: "/",
   },
   devServer: {
-    contentBase: "./app",
+    contentBase: "./src/app",
     publicPath: "/",
     compress: true,
     hot: true,
@@ -41,7 +40,7 @@ module.exports = {
       NODE_ENV: JSON.stringify(process.env.NODE_ENV),
     }),
     new HtmlWebpackPlugin({
-      template: "app/index.html",
+      template: "src/app/index.html",
       filename: "index.html",
     }),
   ],
