@@ -1,6 +1,6 @@
 {
   "name": "@ryubb/cra-template-react-ts-boilerplate",
-  "version": "0.1.6",
+  "version": "0.1.7",
   "files": [
     "template",
     "template.json"
@@ -10,6 +10,7 @@
     "build": "cross-env NODE_ENV=production webpack --mode production --config ./webpack/webpack.config.front.base.js ",
     "start": "cross-env NODE_ENV=development webpack-dev-server --config ./webpack/webpack.config.front.base.js ",
     "test": "cross-env NODE_ENV=test jest",
+    "eject": "echo 'ejected'",
     "test:coverage": "cross-env NODE_ENV=test jest --collect-coverage",
     "test:watch": "cross-env NODE_ENV=test jest --watchAll",
     "lint:eslint": "eslint",
