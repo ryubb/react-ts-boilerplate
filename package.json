@@ -1,6 +1,6 @@
 {
   "name": "@ryubb/cra-template-react-ts-boilerplate",
-  "version": "0.1.8",
+  "version": "0.1.9",
   "files": [
     "template",
     "template.json"
