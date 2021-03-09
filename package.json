@@ -1,7 +1,10 @@
 {
-  "name": "react-ts-boilerplate",
-  "version": "0.1.0",
-  "private": true,
+  "name": "@ryubb/cra-template-react-ts-boilerplate",
+  "version": "0.1.1",
+  "files": [
+    "template",
+    "template.json"
+  ],
   "scripts": {
     "tsc": "tsc --noEmit",
     "build": "cross-env NODE_ENV=production webpack --mode production --config ./webpack/webpack.config.front.base.js ",
@@ -9,13 +12,12 @@
     "test": "cross-env NODE_ENV=test jest",
     "test:coverage": "cross-env NODE_ENV=test jest --collect-coverage",
     "test:watch": "cross-env NODE_ENV=test jest --watchAll",
-    "eject": "react-scripts eject",
     "lint:eslint": "eslint",
     "lint:eslint:fix": "eslint --fix",
     "lint": "npm run lint:eslint -- . ",
     "prettify": "prettier --write",
     "clean-files": "rm -rf template",
-    "cp-files": "mkdir -p template && cp -a ./app ./webpack ./template&& cp -a ./.gitignore ./template/gitignore",
+    "cp-files": "mkdir -p template && cp -a ./app ./webpack ./.eslintignore ./.eslintrc.js ./jest.config.js ./README.md ./tsconfig.json ./template && cp -a ./.gitignore ./template/gitignore",
     "prepublishOnly": "yarn cp-files",
     "postpublish": "yarn clean-files"
   },
@@ -37,7 +39,6 @@
     "react-dom": "^16.13.1",
     "react-redux": "^7.2.1",
     "react-router-dom": "^5.2.0",
-    "react-scripts": "3.4.3",
     "redux": "^4.0.5",
     "redux-actions": "^2.6.5",
     "redux-logger": "^3.0.6",
@@ -48,6 +49,9 @@
     "yup": "^0.29.3"
   },
   "devDependencies": {
+    "@testing-library/jest-dom": "^5.11.4",
+    "@testing-library/react": "^10.4.9",
+    "@testing-library/user-event": "^12.1.2",
     "@types/axios": "^0.14.0",
     "@types/enzyme-adapter-react-16": "^1.0.6",
     "@types/history": "^4.7.7",
@@ -63,9 +67,6 @@
     "@types/redux-mock-store": "^1.0.2",
     "@types/styled-components": "^5.1.2",
     "@types/yup": "^0.29.8",
-    "@testing-library/jest-dom": "^5.11.4",
-    "@testing-library/react": "^10.4.9",
-    "@testing-library/user-event": "^12.1.2",
     "@typescript-eslint/eslint-plugin": "^3.10.1",
     "@typescript-eslint/parser": "^3.10.1",
     "babel-eslint": "^10.1.0",
